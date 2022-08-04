@@ -13,11 +13,6 @@ jobs:
   docs:
     name: Build Docs
     runs-on: ubuntu-latest
-
-jobs:
-  build:
-    name: Build and Deploy
-    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
