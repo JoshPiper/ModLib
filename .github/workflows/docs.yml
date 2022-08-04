@@ -33,3 +33,4 @@ jobs:
         with:
           publish_dir: ./src/docs/build/
           publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
