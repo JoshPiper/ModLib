@@ -17,3 +17,5 @@ for i, spec in ipairs(paths) do
 		end
 	})
 end
+
+return suite
