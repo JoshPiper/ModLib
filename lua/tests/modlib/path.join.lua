@@ -1,3 +1,5 @@
+local path = ModLib.Path
+
 local suite = {
 	groupName = "ModLib.Path.Join",
 	cases = {}
