@@ -208,5 +208,5 @@ function ModLib.Path:CommonPath(path, otherPath)
 		end
 	end
 
-	return self:Normalize(abs .. table.concat(path, self.data.sep))
+	return self:Normalize(abs .. table.concat(path, self.data.sep, 1, i))
 end
