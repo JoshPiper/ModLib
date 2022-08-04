@@ -12,7 +12,8 @@ local paths = {
 	{"/absolute/with_subdir", "/absolute/", "with_subdir"},
 	{"./relative/with_subdir.extension", "./relative/", "with_subdir.extension"},
 	{"relative/with_subdir", "relative/", "with_subdir"},
-	{"relative//with_doubleslash", "relative//", "with_doubleslash"}
+	{"relative//with_doubleslash", "relative//", "with_doubleslash"},
+	{"", "", ""}
 }
 for _, spec in ipairs(paths) do
 	table.insert(suite.cases, {
