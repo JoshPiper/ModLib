@@ -10,4 +10,6 @@ declare -r script_dir=$(realpath $(dirname "$0"))
 (which ldoc > /dev/null 2>&1) || sudo luarocks install ldoc
 
 "$script_dir/template/style/build.sh"
+cp "$script_dir/template/style.css" "$script_dir/style.css"
 "$script_dir/ldoc/ldoc.lua" -c src/docs/config.ld .
+rm "$script_dir/style.css"

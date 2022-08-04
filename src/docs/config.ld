@@ -1,6 +1,6 @@
 title = "CityRP Documentation"
 project = "[FL] CityRP"
-custom_css = "template/style.css"
+custom_css = "style.css"
 
 format = "markdown"
 no_space_before_args = true
