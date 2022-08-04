@@ -7,7 +7,7 @@ local suite = {
 
 local paths = {
 	{"/root", "folder", "/root/folder"},
-	{"/root/", "folder/", "/root/folder"},
+	{"/root/", "folder/", "/root/folder/"},
 	{"root", "folder", "root/folder"},
 	{"root", "/folder", "/folder"}
 }
