@@ -6,10 +6,10 @@ format = "markdown"
 no_space_before_args = true
 merge = true
 template = "template"
-# style = "template/style"
+-- style = "template/style"
 
 dir = "build/"
-# topics = "topics"
+-- topics = "topics"
 file = {
 	"../../lua",
 	exclude = {}
