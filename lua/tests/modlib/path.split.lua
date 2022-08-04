@@ -27,7 +27,7 @@ for _, spec in ipairs(paths) do
 			expect(a).to.eq(spec[2])
 
 			b = path:BaseName(spec[1])
-			expect(a).to.eq(spec[3])
+			expect(b).to.eq(spec[3])
 		end
 	})
 end
