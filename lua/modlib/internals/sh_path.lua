@@ -6,6 +6,8 @@
 local StartsWith = string.StartWith
 local EndsWith = string.EndsWith
 local PatternSafe = string.PatternSafe
+local Replace = string.Replace
+local sub = string.sub
 local match = string.match
 local gmatch = string.gmatch
 
@@ -209,4 +211,26 @@ function ModLib.Path:CommonPath(path, otherPath)
 	end
 
 	return self:Normalize(abs .. table.concat(path, self.data.sep, 1, i))
+end
+
+--- Create a relative version of a path, from a given start path.
+-- @string path Path to modify.
+-- @string[opt] from Basepath to check from.
+-- @rstring
+function ModLib.Path:Relative(path, from)
+	if not from then
+		return path
+	end
+
+	local prefix = self:CommonPath(path, from)
+	if prefix == "" then
+		return path
+	end
+
+	path = Replace(path, prefix, "")
+	if StartsWith(path, "/") then
+		return sub(path, 2)
+	end
+
+	return path
 end
