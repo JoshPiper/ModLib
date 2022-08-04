@@ -21,6 +21,12 @@ for _, spec in ipairs(paths) do
 			local a, b = path:Split(spec[1])
 			expect(a).to.eq(spec[2])
 			expect(b).to.eq(spec[3])
+
+			a = path:DirName(spec[1])
+			expect(a).to.eq(spec[2])
+
+			b = path:BaseName(spec[1])
+			expect(a).to.eq(spec[3])
 		end
 	})
 end
