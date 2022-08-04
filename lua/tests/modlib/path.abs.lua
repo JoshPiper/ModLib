@@ -17,7 +17,7 @@ for _, spec in ipairs(paths) do
 	table.insert(suite.cases, {
 		name = string.format("Mark %s as %s.", spec[1], spec[2] and "absolute" or "relative"),
 		func = function()
-			expect(path:IsAbs(spec[1])).to.eq(spec[3])
+			expect(path:IsAbs(spec[1])).to.eq(spec[2])
 		end
 	})
 end
