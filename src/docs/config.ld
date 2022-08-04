@@ -1,5 +1,5 @@
-title = "CityRP Documentation"
-project = "[FL] CityRP"
+title = "ModLib Documentation"
+project = "ModLib"
 custom_css = "style.css"
 
 format = "markdown"
