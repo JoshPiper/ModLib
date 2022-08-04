@@ -21,9 +21,9 @@ for _, spec in ipairs(paths) do
 		name = string.format("Split %s to %i segments", spec[1], #spec[2]),
 		func = function()
 			local segments, n = path:Explode(spec[1])
-			expect(segements).to.beA("table")
-			expect(#segements).to.eq(n)
-			expect(#segements).to.eq(#spec[2])
+			expect(segments).to.beA("table")
+			expect(#segments).to.eq(n)
+			expect(#segments).to.eq(#spec[2])
 
 			for i, seg in ipairs(spec[2]) do
 				expect(segments[i]).to.eq(seg)
