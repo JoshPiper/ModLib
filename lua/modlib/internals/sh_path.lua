@@ -40,7 +40,7 @@ function ModLib.Path:IsAbs(path)
 end
 
 --- Join paths together, inserting path seperators where approprate.
--- @tparam string[]|string Either a list of strings, or a vararg of strings.
+-- @tparam string[]|string ... Either a list of strings, or a vararg of strings.
 -- @rstring Joined, but non-normalised path.
 function ModLib.Path:Join(...)
 	local out = {}
