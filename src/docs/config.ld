@@ -1,12 +1,12 @@
 title = "CityRP Documentation"
 project = "[FL] CityRP"
-custom_css = "style.css"
+custom_css = "template/style.css"
 
 format = "markdown"
 no_space_before_args = true
 merge = true
 template = "template"
-style = "template/style"
+# style = "template/style"
 
 dir = "build/"
 # topics = "topics"
