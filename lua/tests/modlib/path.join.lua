@@ -11,7 +11,7 @@ local paths = {
 	{"root", "folder", "root/folder"},
 	{"root", "/folder", "/folder"}
 }
-for i, spec in ipairs(paths) do
+for _, spec in ipairs(paths) do
 	table.insert(suite.cases, {
 		name = "Correctly Join Paths (" .. spec[1] .. ", " .. spec[2] .. ") => " .. spec[3],
 		func = function()
