@@ -26,6 +26,8 @@ jobs:
         with:
           path: src/docs/template
           repository: limelight-development/documentation-template
+      - name: Install Template Dependencies
+        run: ./src/docs/template/style/install.sh
       - name: Build
         run: ./src/docs/build.sh
       - name: Deploy Docs
