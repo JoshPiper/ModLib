@@ -17,7 +17,8 @@ local paths = {
 	{"/root/dir", "/root/dir"},
 	{"/root/dir/", "/root/dir"},
 	{"/root/dir/../", "/root"},
-	{"//root//dir//..//", "/root"}
+	{"//root//dir//..//", "/root"},
+	{"/", "/"}
 }
 for _, spec in ipairs(paths) do
 	table.insert(suite.cases, {
