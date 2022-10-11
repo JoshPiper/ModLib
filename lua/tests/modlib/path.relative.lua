@@ -6,12 +6,12 @@ local suite = {
 		{
 			name = "Relative Path must fail.",
 			func = function()
-				expect(path:Relative("root", "/")).to.errWith("Input path must be absolute.")
+				expect(function() path:Relative("root", "/") end).to.errWith("Input path must be absolute.")
 			end
 		}, {
 			name = "Relative Root must fail.",
 			func = function()
-				expect(path:Relative("/root", "root")).to.errWith("Root path must be absolute.")
+				expect(function() path:Relative("/root", "root") end).to.errWith("Root path must be absolute.")
 			end
 		}
 	}
