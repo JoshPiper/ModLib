@@ -144,6 +144,9 @@ function ModLib.Path:Normalize(path)
 	if path == "" then
 		return self.data.cur
 	end
+	if path == self.data.sep then
+		return path
+	end
 
 	local abs = self:IsAbs(path) and self.data.sep or ""
 	local n
