@@ -218,14 +218,20 @@ end
 
 --- Create a relative version of a path, from a given start path.
 -- @string path Path to modify.
--- @string[opt] from Basepath to check from.
+-- @string[opt] root Basepath to check from.
 -- @rstring
-function ModLib.Path:Relative(path, from)
-	if not from then
+function ModLib.Path:Relative(path, root)
+	if not root then
 		return path
 	end
+	if root == path then
+		return "."
+	end
 
-	local prefix = self:CommonPath(path, from)
+	assert(self:IsAbs(path), "Input path must be absolute.")
+	assert(self:IsAbs(root), "Root path must be absolute.")
+
+	local prefix = self:CommonPath(path, root)
 	if prefix == "" then
 		return path
 	end
